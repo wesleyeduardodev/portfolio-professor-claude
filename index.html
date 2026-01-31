@@ -2,7 +2,11 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
     <meta name="description" content="Portfólio acadêmico do Prof. Dr. Ricardo Almeida Santos - Professor de Ciência da Computação na UFMA, especialista em Inteligência Artificial e Machine Learning.">
     <meta name="keywords" content="professor, universidade, ciência da computação, inteligência artificial, machine learning, UFMA">
     <meta name="author" content="Prof. Dr. Ricardo Almeida Santos">
@@ -52,6 +56,17 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Aplica tema antes do render para evitar flash -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
 
@@ -61,8 +76,8 @@
     </a>
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md" role="banner">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md pt-safe" role="banner">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 pl-safe pr-safe">
             <nav class="flex items-center justify-between h-16 lg:h-20" role="navigation" aria-label="Navegação principal">
                 <!-- Logo -->
                 <a href="#home" class="flex items-center space-x-2 text-primary dark:text-primary-light font-serif font-bold text-xl">
@@ -896,7 +911,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-12" role="contentinfo">
+    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-12 pb-safe" role="contentinfo">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
