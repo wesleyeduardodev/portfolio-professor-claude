@@ -1,0 +1,13 @@
+Pasta para imagens do professor
+================================
+
+Coloque aqui as seguintes imagens:
+
+1. profile-photo.jpg - Foto principal do professor (recomendado: 400x400px, formato quadrado)
+2. secondary-photo.jpg - Foto secundária para a seção de biografia (opcional)
+3. og-image.jpg - Imagem para compartilhamento em redes sociais (recomendado: 1200x630px)
+
+Dicas:
+- Use imagens otimizadas para web (comprimidas)
+- Formatos recomendados: JPG para fotos, PNG para logos
+- Mantenha as imagens abaixo de 200KB cada para melhor performance

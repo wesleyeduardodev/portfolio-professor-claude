@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio acadêmico do Prof. Dr. Ricardo Almeida Santos - Professor de Ciência da Computação na UFMA, especialista em Inteligência Artificial e Machine Learning.">
+    <meta name="keywords" content="professor, universidade, ciência da computação, inteligência artificial, machine learning, UFMA">
+    <meta name="author" content="Prof. Dr. Ricardo Almeida Santos">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prof. Dr. Ricardo Almeida Santos - Portfólio Acadêmico">
+    <meta property="og:description" content="Professor Associado de Ciência da Computação na UFMA, especialista em IA e Machine Learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/og-image.jpg">
+
+    <title>Prof. Dr. Ricardo Almeida Santos | Portfólio Acadêmico</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1e40af',
+                            light: '#3b82f6',
+                        },
+                        secondary: '#0f172a',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-50">
+        Pular para o conteúdo principal
+    </a>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md" role="banner">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-16 lg:h-20" role="navigation" aria-label="Navegação principal">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-2 text-primary dark:text-primary-light font-serif font-bold text-xl">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="hidden sm:inline">Prof. Ricardo Santos</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center space-x-8">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#biografia" class="nav-link">Biografia</a></li>
+                    <li><a href="#disciplinas" class="nav-link">Disciplinas</a></li>
+                    <li><a href="#publicacoes" class="nav-link">Publicações</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Alternar tema">
+                        <i class="fas fa-sun text-amber-500 dark:hidden"></i>
+                        <i class="fas fa-moon text-slate-300 hidden dark:block"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Abrir menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700">
+            <ul class="container mx-auto px-4 py-4 space-y-2">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#biografia" class="mobile-nav-link">Biografia</a></li>
+                <li><a href="#disciplinas" class="mobile-nav-link">Disciplinas</a></li>
+                <li><a href="#publicacoes" class="mobile-nav-link">Publicações</a></li>
+                <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+
+        <!-- HOME Section -->
+        <section id="home" class="min-h-screen flex items-center pt-20 lg:pt-0 relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 dark:from-primary/10 dark:to-accent/10"></div>
+            <div class="absolute inset-0 opacity-30 dark:opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%231e40af\' fill-opacity=\'0.08\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <!-- Text Content -->
+                    <div class="flex-1 text-center lg:text-left animate-fade-in">
+                        <p class="text-primary dark:text-primary-light font-medium mb-2">Bem-vindo ao meu portfólio</p>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4">
+                            Prof. Dr. Ricardo<br>Almeida Santos
+                        </h1>
+                        <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-2">
+                            Professor Associado
+                        </p>
+                        <p class="text-lg text-slate-500 dark:text-slate-400 mb-6">
+                            Departamento de Ciência da Computação<br>
+                            Universidade Federal do Maranhão - UFMA
+                        </p>
+                        <p class="text-lg sm:text-xl text-primary dark:text-primary-light font-medium mb-8 italic">
+                            "Transformando dados em conhecimento através da Inteligência Artificial"
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="http://lattes.cnpq.br/0000000000000000" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                                <i class="fas fa-file-alt mr-2"></i>
+                                Ver Currículo Lattes
+                            </a>
+                            <a href="#contato" class="btn-secondary">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Entrar em Contato
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Profile Photo -->
+                    <div class="flex-shrink-0 animate-fade-in-delayed">
+                        <div class="relative">
+                            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-primary to-primary-light p-1">
+                                <div class="w-full h-full rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center overflow-hidden">
+                                    <!-- Placeholder for professor photo -->
+                                    <i class="fas fa-user text-8xl text-slate-400 dark:text-slate-500"></i>
+                                </div>
+                            </div>
+                            <!-- Decorative elements -->
+                            <div class="absolute -top-4 -right-4 w-20 h-20 bg-accent/20 rounded-full blur-xl"></div>
+                            <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/20 rounded-full blur-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
+                <a href="#biografia" class="text-slate-400 hover:text-primary transition-colors" aria-label="Rolar para baixo">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- BIOGRAFIA Section -->
+        <section id="biografia" class="py-20 lg:py-32 bg-white dark:bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Section Title -->
+                    <div class="text-center mb-16 animate-on-scroll">
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                            Biografia
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-12">
+                        <!-- Photo and Quick Info -->
+                        <div class="lg:col-span-1 animate-on-scroll">
+                            <div class="sticky top-24">
+                                <div class="bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 shadow-lg">
+                                    <div class="w-full aspect-square rounded-xl bg-slate-200 dark:bg-slate-600 flex items-center justify-center mb-6 overflow-hidden">
+                                        <i class="fas fa-user text-6xl text-slate-400 dark:text-slate-500"></i>
+                                    </div>
+                                    <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-2">
+                                        Prof. Dr. Ricardo A. Santos
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-300 mb-4">
+                                        Professor Associado - UFMA
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="badge">Doutorado - USP</span>
+                                        <span class="badge">Mestrado - UFMA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Biography Text -->
+                        <div class="lg:col-span-2 space-y-8 animate-on-scroll">
+                            <!-- Main Bio -->
+                            <div class="prose prose-lg dark:prose-invert max-w-none">
+                                <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                                    Ricardo Almeida Santos é Doutor em Ciência da Computação pela Universidade de São Paulo (USP),
+                                    onde desenvolveu sua tese sobre modelos de linguagem aplicados à análise de sentimentos em
+                                    português brasileiro. Durante o doutorado, realizou um período sanduíche de um ano na
+                                    Universidade de Stanford, nos Estados Unidos, trabalhando no laboratório de Inteligência
+                                    Artificial sob supervisão de renomados pesquisadores da área.
+                                </p>
+                                <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                                    Concluiu seu Mestrado em Informática pela Universidade Federal do Maranhão (UFMA) em 2012,
+                                    com dissertação focada em técnicas de mineração de texto para detecção de padrões em
+                                    grandes volumes de dados. Sua formação acadêmica iniciou-se com o Bacharelado em Sistemas
+                                    de Informação pelo Instituto Federal do Maranhão (IFMA), concluído em 2009.
+                                </p>
+                                <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                                    Atualmente é Professor Associado do Departamento de Ciência da Computação da UFMA, onde
+                                    leciona disciplinas de graduação e pós-graduação nas áreas de Inteligência Artificial,
+                                    Aprendizado de Máquina e Processamento de Linguagem Natural. Coordena o Laboratório de
+                                    IA Aplicada (LAIA), que desenvolve pesquisas de ponta em aplicações de deep learning
+                                    para processamento de linguagem e análise de dados.
+                                </p>
+                                <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                                    Ao longo de sua carreira, já orientou mais de 30 trabalhos de conclusão de curso e 8
+                                    dissertações de mestrado, formando profissionais que hoje atuam em empresas de tecnologia
+                                    e instituições de pesquisa. É revisor de periódicos internacionais como o Journal of
+                                    Artificial Intelligence Research e membro do comitê de programa de conferências como
+                                    BRACIS e STIL.
+                                </p>
+                            </div>
+
+                            <!-- Timeline -->
+                            <div class="mt-12">
+                                <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                                    Trajetória Acadêmica
+                                </h3>
+                                <div class="space-y-6">
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <span class="text-sm text-primary dark:text-primary-light font-medium">2018 - Presente</span>
+                                            <h4 class="font-bold text-slate-900 dark:text-white">Professor Associado</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">Universidade Federal do Maranhão - UFMA</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <span class="text-sm text-primary dark:text-primary-light font-medium">2013 - 2017</span>
+                                            <h4 class="font-bold text-slate-900 dark:text-white">Doutorado em Ciência da Computação</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">Universidade de São Paulo - USP (Sanduíche em Stanford)</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <span class="text-sm text-primary dark:text-primary-light font-medium">2010 - 2012</span>
+                                            <h4 class="font-bold text-slate-900 dark:text-white">Mestrado em Informática</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">Universidade Federal do Maranhão - UFMA</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <span class="text-sm text-primary dark:text-primary-light font-medium">2005 - 2009</span>
+                                            <h4 class="font-bold text-slate-900 dark:text-white">Bacharelado em Sistemas de Informação</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">Instituto Federal do Maranhão - IFMA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Areas of Expertise -->
+                            <div class="mt-12">
+                                <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                                    Áreas de Atuação
+                                </h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="area-tag">
+                                        <i class="fas fa-brain mr-2"></i>Inteligência Artificial
+                                    </span>
+                                    <span class="area-tag">
+                                        <i class="fas fa-cogs mr-2"></i>Machine Learning
+                                    </span>
+                                    <span class="area-tag">
+                                        <i class="fas fa-language mr-2"></i>Processamento de Linguagem Natural
+                                    </span>
+                                    <span class="area-tag">
+                                        <i class="fas fa-smile mr-2"></i>Análise de Sentimentos
+                                    </span>
+                                    <span class="area-tag">
+                                        <i class="fas fa-database mr-2"></i>Big Data
+                                    </span>
+                                    <span class="area-tag">
+                                        <i class="fas fa-network-wired mr-2"></i>Deep Learning
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCIPLINAS Section -->
+        <section id="disciplinas" class="py-20 lg:py-32 bg-slate-50 dark:bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Section Title -->
+                    <div class="text-center mb-16 animate-on-scroll">
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                            Disciplinas
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                        <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                            Disciplinas ministradas nos cursos de graduação e pós-graduação
+                        </p>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-12 animate-on-scroll">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="graduacao">Graduação</button>
+                        <button class="filter-btn" data-filter="pos">Pós-Graduação</button>
+                    </div>
+
+                    <!-- Disciplines Grid -->
+                    <div class="grid md:grid-cols-2 gap-6" id="disciplinas-grid">
+                        <!-- Discipline Card 1 -->
+                        <article class="discipline-card animate-on-scroll" data-category="graduacao">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light rounded-full mb-2">
+                                        DCOMP0401
+                                    </span>
+                                    <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">
+                                        Inteligência Artificial
+                                    </h3>
+                                </div>
+                                <span class="badge-period">2024.2</span>
+                            </div>
+                            <div class="space-y-2 mb-4">
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-book-open w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">Ciência da Computação</span>
+                                </p>
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-clock w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">60 horas</span>
+                                </p>
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 mb-6 line-clamp-3">
+                                Introdução à IA, busca, representação do conhecimento, aprendizado de máquina,
+                                redes neurais e aplicações práticas.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary dark:text-primary-light font-medium hover:underline">
+                                <i class="fas fa-folder-open mr-2"></i>
+                                Ver Material
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </article>
+
+                        <!-- Discipline Card 2 -->
+                        <article class="discipline-card animate-on-scroll" data-category="graduacao">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light rounded-full mb-2">
+                                        DCOMP0502
+                                    </span>
+                                    <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">
+                                        Aprendizado de Máquina
+                                    </h3>
+                                </div>
+                                <span class="badge-period">2024.2</span>
+                            </div>
+                            <div class="space-y-2 mb-4">
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-book-open w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">Ciência da Computação</span>
+                                </p>
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-clock w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">60 horas</span>
+                                </p>
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 mb-6 line-clamp-3">
+                                Algoritmos supervisionados e não supervisionados, avaliação de modelos,
+                                deep learning e projetos aplicados.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary dark:text-primary-light font-medium hover:underline">
+                                <i class="fas fa-folder-open mr-2"></i>
+                                Ver Material
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </article>
+
+                        <!-- Discipline Card 3 -->
+                        <article class="discipline-card animate-on-scroll" data-category="pos">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="inline-block px-3 py-1 text-sm font-medium bg-accent/10 text-amber-700 dark:bg-accent/20 dark:text-accent rounded-full mb-2">
+                                        PPGCC0801
+                                    </span>
+                                    <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">
+                                        Processamento de Linguagem Natural
+                                    </h3>
+                                </div>
+                                <span class="badge-period">2024.2</span>
+                            </div>
+                            <div class="space-y-2 mb-4">
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-book-open w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">Mestrado em Ciência da Computação</span>
+                                </p>
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-clock w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">45 horas</span>
+                                </p>
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 mb-6 line-clamp-3">
+                                Fundamentos de PLN, modelos de linguagem, transformers, análise de sentimentos e chatbots.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary dark:text-primary-light font-medium hover:underline">
+                                <i class="fas fa-folder-open mr-2"></i>
+                                Ver Material
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </article>
+
+                        <!-- Discipline Card 4 -->
+                        <article class="discipline-card animate-on-scroll" data-category="graduacao">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary dark:bg-primary-light/20 dark:text-primary-light rounded-full mb-2">
+                                        DCOMP0201
+                                    </span>
+                                    <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">
+                                        Estrutura de Dados
+                                    </h3>
+                                </div>
+                                <span class="badge-period">2024.1</span>
+                            </div>
+                            <div class="space-y-2 mb-4">
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-book-open w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">Sistemas de Informação</span>
+                                </p>
+                                <p class="text-slate-600 dark:text-slate-400 flex items-center">
+                                    <i class="fas fa-clock w-5 text-primary dark:text-primary-light"></i>
+                                    <span class="ml-2">90 horas</span>
+                                </p>
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 mb-6 line-clamp-3">
+                                Listas, pilhas, filas, árvores, grafos, ordenação, busca e análise de complexidade.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-primary dark:text-primary-light font-medium hover:underline">
+                                <i class="fas fa-folder-open mr-2"></i>
+                                Ver Material
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLICACOES Section -->
+        <section id="publicacoes" class="py-20 lg:py-32 bg-white dark:bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Section Title -->
+                    <div class="text-center mb-16 animate-on-scroll">
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                            Publicações
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                        <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                            Produção científica em periódicos, livros e eventos acadêmicos
+                        </p>
+                    </div>
+
+                    <!-- Publication Filters -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-12 animate-on-scroll">
+                        <button class="pub-filter-btn active" data-filter="all">
+                            <i class="fas fa-layer-group mr-2"></i>Todas
+                        </button>
+                        <button class="pub-filter-btn" data-filter="artigos">
+                            <i class="fas fa-file-alt mr-2"></i>Artigos
+                        </button>
+                        <button class="pub-filter-btn" data-filter="livros">
+                            <i class="fas fa-book mr-2"></i>Livros
+                        </button>
+                        <button class="pub-filter-btn" data-filter="congressos">
+                            <i class="fas fa-users mr-2"></i>Congressos
+                        </button>
+                    </div>
+
+                    <!-- Publications List -->
+                    <div class="space-y-6" id="publicacoes-list">
+
+                        <!-- Publication 1 - Artigo -->
+                        <article class="publication-card animate-on-scroll" data-type="artigos">
+                            <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <span class="pub-badge artigo">Artigo</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                        Deep Learning for Sentiment Analysis in Portuguese: A Comprehensive Study
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                                        <strong class="text-slate-900 dark:text-white">SANTOS, R. A.</strong>; SILVA, M. C.; OLIVEIRA, J. P.
+                                    </p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">
+                                        <i class="fas fa-journal-whills mr-1"></i>
+                                        Journal of Artificial Intelligence Research, 2024
+                                    </p>
+                                    <a href="https://doi.org/10.1000/jair.2024.001" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary dark:text-primary-light text-sm font-medium hover:underline">
+                                        <i class="fas fa-external-link-alt mr-1"></i>
+                                        DOI: 10.1000/jair.2024.001
+                                    </a>
+                                </div>
+                                <div class="flex-shrink-0 text-right">
+                                    <span class="text-2xl font-bold text-primary dark:text-primary-light">2024</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Publication 2 - Artigo -->
+                        <article class="publication-card animate-on-scroll" data-type="artigos">
+                            <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <span class="pub-badge artigo">Artigo</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                        Análise de Fake News em Redes Sociais Usando Transformers
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                                        COSTA, A. B.; <strong class="text-slate-900 dark:text-white">SANTOS, R. A.</strong>
+                                    </p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">
+                                        <i class="fas fa-journal-whills mr-1"></i>
+                                        Revista Brasileira de Computação Aplicada, 2023
+                                    </p>
+                                    <a href="https://doi.org/10.5335/rbca.v15i2.13500" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary dark:text-primary-light text-sm font-medium hover:underline">
+                                        <i class="fas fa-external-link-alt mr-1"></i>
+                                        DOI: 10.5335/rbca.v15i2.13500
+                                    </a>
+                                </div>
+                                <div class="flex-shrink-0 text-right">
+                                    <span class="text-2xl font-bold text-primary dark:text-primary-light">2023</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Publication 3 - Congresso -->
+                        <article class="publication-card animate-on-scroll" data-type="congressos">
+                            <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <span class="pub-badge congresso">Congresso</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                        A Novel Approach for Text Classification Using BERT
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                                        <strong class="text-slate-900 dark:text-white">SANTOS, R. A.</strong>; LIMA, F. S.
+                                    </p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>
+                                        Brazilian Symposium on Artificial Intelligence (BRACIS), Belo Horizonte, MG
+                                    </p>
+                                </div>
+                                <div class="flex-shrink-0 text-right">
+                                    <span class="text-2xl font-bold text-primary dark:text-primary-light">2023</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Publication 4 - Livro -->
+                        <article class="publication-card animate-on-scroll" data-type="livros">
+                            <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <span class="pub-badge livro">Livro</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                        Inteligência Artificial: Teoria e Prática
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                                        <strong class="text-slate-900 dark:text-white">SANTOS, R. A.</strong>
+                                    </p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">
+                                        <i class="fas fa-building mr-1"></i>
+                                        Editora UFMA
+                                    </p>
+                                    <span class="text-slate-500 dark:text-slate-400 text-sm">
+                                        <i class="fas fa-barcode mr-1"></i>
+                                        ISBN: 978-85-0000-000-0
+                                    </span>
+                                </div>
+                                <div class="flex-shrink-0 text-right">
+                                    <span class="text-2xl font-bold text-primary dark:text-primary-light">2022</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Publication 5 - Artigo -->
+                        <article class="publication-card animate-on-scroll" data-type="artigos">
+                            <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <span class="pub-badge artigo">Artigo</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                        Natural Language Processing for Healthcare: Challenges and Opportunities
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                                        <strong class="text-slate-900 dark:text-white">SANTOS, R. A.</strong>; PEREIRA, M. L.; SOUZA, C. E.
+                                    </p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">
+                                        <i class="fas fa-journal-whills mr-1"></i>
+                                        Expert Systems with Applications, 2022
+                                    </p>
+                                    <a href="#" class="inline-flex items-center text-primary dark:text-primary-light text-sm font-medium hover:underline">
+                                        <i class="fas fa-external-link-alt mr-1"></i>
+                                        DOI: 10.1016/j.eswa.2022.001
+                                    </a>
+                                </div>
+                                <div class="flex-shrink-0 text-right">
+                                    <span class="text-2xl font-bold text-primary dark:text-primary-light">2022</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Publication 6 - Congresso -->
+                        <article class="publication-card animate-on-scroll" data-type="congressos">
+                            <div class="flex flex-col lg:flex-row lg:items-start gap-4">
+                                <div class="flex-shrink-0">
+                                    <span class="pub-badge congresso">Congresso</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                        Multimodal Sentiment Analysis: Combining Text and Images
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                                        RODRIGUES, T. M.; <strong class="text-slate-900 dark:text-white">SANTOS, R. A.</strong>
+                                    </p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>
+                                        Symposium on Knowledge Discovery, Mining and Learning (KDMiLe), Porto Alegre, RS
+                                    </p>
+                                </div>
+                                <div class="flex-shrink-0 text-right">
+                                    <span class="text-2xl font-bold text-primary dark:text-primary-light">2021</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO Section -->
+        <section id="contato" class="py-20 lg:py-32 bg-slate-50 dark:bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Section Title -->
+                    <div class="text-center mb-16 animate-on-scroll">
+                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                            Contato
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                        <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                            Entre em contato para colaborações, orientações ou dúvidas acadêmicas
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <!-- Contact Info -->
+                        <div class="space-y-8 animate-on-scroll">
+                            <!-- Contact Details -->
+                            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg">
+                                <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6">
+                                    Informações de Contato
+                                </h3>
+                                <ul class="space-y-4">
+                                    <li>
+                                        <a href="mailto:ricardo.santos@ufma.br" class="flex items-center text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary-light transition-colors">
+                                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary-light/20 rounded-lg flex items-center justify-center mr-4">
+                                                <i class="fas fa-envelope text-primary dark:text-primary-light"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-slate-500 dark:text-slate-400">Email</span>
+                                                <p class="font-medium">ricardo.santos@ufma.br</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+559832728000" class="flex items-center text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary-light transition-colors">
+                                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary-light/20 rounded-lg flex items-center justify-center mr-4">
+                                                <i class="fas fa-phone text-primary dark:text-primary-light"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-slate-500 dark:text-slate-400">Telefone</span>
+                                                <p class="font-medium">(98) 3272-8000</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center text-slate-600 dark:text-slate-300">
+                                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary-light/20 rounded-lg flex items-center justify-center mr-4">
+                                                <i class="fas fa-door-open text-primary dark:text-primary-light"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-slate-500 dark:text-slate-400">Sala</span>
+                                                <p class="font-medium">Bloco 7, Sala 302</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-start text-slate-600 dark:text-slate-300">
+                                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary-light/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                                <i class="fas fa-map-marker-alt text-primary dark:text-primary-light"></i>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-slate-500 dark:text-slate-400">Endereço</span>
+                                                <p class="font-medium">
+                                                    Universidade Federal do Maranhão<br>
+                                                    Av. dos Portugueses, 1966 - Bacanga<br>
+                                                    São Luís - MA, 65080-805
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Office Hours -->
+                            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg">
+                                <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6">
+                                    <i class="fas fa-calendar-alt mr-2 text-primary dark:text-primary-light"></i>
+                                    Horário de Atendimento
+                                </h3>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead>
+                                            <tr class="border-b dark:border-slate-700">
+                                                <th class="text-left py-2 text-slate-500 dark:text-slate-400 font-medium">Dia</th>
+                                                <th class="text-left py-2 text-slate-500 dark:text-slate-400 font-medium">Horário</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-b dark:border-slate-700">
+                                                <td class="py-3 text-slate-700 dark:text-slate-300">Segunda-feira</td>
+                                                <td class="py-3 font-medium text-slate-900 dark:text-white">14:00 - 16:00</td>
+                                            </tr>
+                                            <tr class="border-b dark:border-slate-700">
+                                                <td class="py-3 text-slate-700 dark:text-slate-300">Quarta-feira</td>
+                                                <td class="py-3 font-medium text-slate-900 dark:text-white">10:00 - 12:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3 text-slate-700 dark:text-slate-300">Sexta-feira</td>
+                                                <td class="py-3 font-medium text-slate-900 dark:text-white">14:00 - 15:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Academic Profiles -->
+                            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg">
+                                <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6">
+                                    Perfis Acadêmicos
+                                </h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <a href="http://lattes.cnpq.br/0000000000000000" target="_blank" rel="noopener noreferrer" class="academic-link">
+                                        <i class="fas fa-file-alt text-2xl mb-2 text-primary dark:text-primary-light"></i>
+                                        <span>Lattes</span>
+                                    </a>
+                                    <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer" class="academic-link">
+                                        <i class="fab fa-orcid text-2xl mb-2 text-green-600"></i>
+                                        <span>ORCID</span>
+                                    </a>
+                                    <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="academic-link">
+                                        <i class="fas fa-graduation-cap text-2xl mb-2 text-blue-600"></i>
+                                        <span>Google Scholar</span>
+                                    </a>
+                                    <a href="https://researchgate.net" target="_blank" rel="noopener noreferrer" class="academic-link">
+                                        <i class="fab fa-researchgate text-2xl mb-2 text-teal-600"></i>
+                                        <span>ResearchGate</span>
+                                    </a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="academic-link col-span-2 sm:col-span-1">
+                                        <i class="fab fa-linkedin text-2xl mb-2 text-blue-700"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="animate-on-scroll">
+                            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 lg:p-8 shadow-lg">
+                                <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6">
+                                    Envie uma Mensagem
+                                </h3>
+                                <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST" class="space-y-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                            Nome Completo *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            required
+                                            class="form-input"
+                                            placeholder="Seu nome"
+                                        >
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                            Email *
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            class="form-input"
+                                            placeholder="seu.email@exemplo.com"
+                                        >
+                                    </div>
+                                    <div>
+                                        <label for="subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                            Assunto
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="subject"
+                                            name="subject"
+                                            class="form-input"
+                                            placeholder="Assunto da mensagem"
+                                        >
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                                            Mensagem *
+                                        </label>
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            rows="5"
+                                            required
+                                            class="form-input resize-none"
+                                            placeholder="Escreva sua mensagem aqui..."
+                                        ></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-primary w-full">
+                                        <i class="fas fa-paper-plane mr-2"></i>
+                                        Enviar Mensagem
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-12 animate-on-scroll">
+                        <div class="bg-white dark:bg-slate-800 rounded-2xl p-2 shadow-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.993428895721!2d-44.26897542414955!3d-2.5589344974271756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68ef3c6c0b0e7%3A0x9f0e31b3ed7f42e9!2sUniversidade%20Federal%20do%20Maranh%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1704067200000!5m2!1spt-BR!2sbr"
+                                class="w-full h-64 lg:h-80 rounded-xl"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Localização da UFMA"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-12" role="contentinfo">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="font-serif text-xl text-white mb-2">
+                            Prof. Dr. Ricardo Almeida Santos
+                        </p>
+                        <p class="text-sm">
+                            Universidade Federal do Maranhão - UFMA
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="mailto:ricardo.santos@ufma.br" class="footer-social" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="http://lattes.cnpq.br/0000000000000000" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Currículo Lattes">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="ORCID">
+                            <i class="fab fa-orcid"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <hr class="border-slate-800 my-8">
+                <p class="text-center text-sm">
+                    &copy; 2024 Prof. Dr. Ricardo Almeida Santos. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary hover:bg-primary-light text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
